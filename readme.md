@@ -43,3 +43,7 @@ Esta função armazena o link de redirecionamento que deverá ser acionado em al
         window.location.href =
             `${thankyou}${currentSearch}&captura=${currentPath[1]}`;
     };
+
+# Instalando no seu site
+Para instalar no seu site webflow insira este script no header do seu site, dentro de tags 
+    \<script> \</script>
