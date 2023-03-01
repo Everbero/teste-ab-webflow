@@ -44,7 +44,7 @@ currentPath.some((r) => {
 });
 
 const redirectTYP = () => {
-  let thankyou = "www.lucianofernandesif.com.br/workshop-obrigado";
+  let thankyou = "www.sitedestino.com.br/pagina-obrigado";
   window.location.href = `${thankyou}${currentSearch}&captura=${currentPath[1]}`;
 };
 
