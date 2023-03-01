@@ -44,7 +44,7 @@ currentPath.some((r) => {
       window.location.href = `${destiny}${defaultParamList[r]}&captura=${destiny}`;
     } else {
       // se houverem parametros encaminho para o url destino
-      window.location.href = `${destiny}${currentSearch[r]}&captura=${destiny}`;
+      window.location.href = `${destiny}${currentSearch}&captura=${destiny}`;
     }
   }
 });
