@@ -23,6 +23,12 @@ const linksAB = {
   "link-1": ["l-a", "l-b", "l-c"],
   "link-2": ["l-1", "l-2", "l-3"],
 };
+// páginas de obrigado de cada campanha:
+const tyPages = {
+  "link-1": "www.sitedestino.com.br/pagina-obrigado",
+  "link-2": "www.sitedestino.com.br/pagina-obrigado2",
+}
+
 ////////////////////////////////////////////////////////////////////////////
 ///////////////////  FUNCAO DE REDIRECIONAMENTO ////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
@@ -43,8 +49,14 @@ currentPath.some((r) => {
   }
 });
 
+// identifica a página atual e redireciona para uma página de obrigado dinâmicamente
 const redirectTYP = () => {
-  let thankyou = "www.sitedestino.com.br/pagina-obrigado";
+  let thankyou;
+  Object.entries(linksAB).map((element, index) => {
+    return element[1].find((item) => {
+      if (item === currentPath[1]) thankyou = tyPages[element[0]];
+    });
+  });
   window.location.href = `${thankyou}${currentSearch}&captura=${currentPath[1]}`;
 };
 

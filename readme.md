@@ -34,15 +34,13 @@ Esta constante guarda  os links para onde o usuário será redirecionado, depend
         "link-pagina-1": ["pagina-a", "pagina-b", "pagina-c"],
         "link-pagina-2": ["pagina-1", "pagina-2", "pagina-3"]
     };
+### tyPages
+Esta constante armazena as páginas de obrigado, seguindo o mesmo padrão das variáveis anteriores, crie uma lista das páginas de destino seguindo o padrão do exemplo abaixo:
 
-### redirectTYP
-Esta função armazena o link de redirecionamento que deverá ser acionado em algum formato e enviar o seu usuário para a página de obrigado, nesta função preencha apenas o valor da variável thankyou que deve conter o link do site para onde você irá redirecionar o seu usuário, veja o exemplo:
-
-    const redirectTYP = () => {
-        let thankyou = "www.seitedestino.com.br/pagina-obrigado";
-        window.location.href =
-            `${thankyou}${currentSearch}&captura=${currentPath[1]}`;
-    };
+    const tyPages = {
+        "link-1": "www.sitedestino.com.br/pagina-obrigado",
+        "link-2": "www.sitedestino.com.br/pagina-obrigado2",
+    }
 
 # Instalando no seu site
 Para instalar no seu site webflow insira este script no header do seu site, dentro de tags 
