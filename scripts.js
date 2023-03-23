@@ -57,7 +57,7 @@ const redirectTYP = () => {
       if (item === currentPath[1]) thankyou = tyPages[element[0]];
     });
   });
-  window.location.href = `${thankyou}${currentSearch}&captura=${currentPath[1]}`;
+  window.location.href = `${thankyou}${currentSearch}`;
 };
 ////////////////////////////////////////////////////////////////////////////
 ///////////////////  FIM DO SCRIPT DE TESTES AB ////////////////////////////
